@@ -59,7 +59,19 @@
 
   <div style="text-align:center; margin:10px "><a style="width:250px" class="btn btn-info" href="search" >find your car</a></div>
 
-
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "d355b1d3-816d-424f-b7fb-9ec40580b63f", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "1dc1f50b-b1c7-4fe6-8511-843f66f9eee7", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
 {% endblock %}
 </body>
 
